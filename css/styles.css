@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left {
+    background-image: url('../images/roteiro-escandinavia.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-image: url('../images/escandinavia.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: start;
+    background-attachment: fixed;
+    height: 20vh;
+    color: #fff;
+}
+
+main {
+    background-image: url('../images/roteiro-escandinavia.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: 0.5;
+    opacity: 0.9;
+    height: 80vh;
+    color: #fff;
+}
+
+.recados {
+    padding-left: 10px;
+    padding-right: 10px;
+}

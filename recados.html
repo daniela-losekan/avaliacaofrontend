@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>LISTA DE RECADOS</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="d-flex col-12 align-items-end">
+            <h1>
+                Meus recados
+            </h1>
+        </header>
+        <main>
+            <div class="recados">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label>Adicione algum recado importante!</label>
+                    </div>
+                    <div class="input-group d-flex">
+                        <input type="text" id="descricaoRecado" class="col-3"
+                        placeholder="Descrição" aria-label="Recipient's username"
+                        aria-describedby="button-addon2">
+                        <input type="text" id="detalhesRecado" class="form-control"
+                        placeholder="Detalhamento" aria-label="Recipient's username"
+                        aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button onclick="adicionarRecado(event)" class="btn btn-primary" type="button" id="salvarRecado">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+                <table id="tabela" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Detalhamento</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button id="apagarRecado" onclick="apagarRecado()" type="button" class="btn btn-danger">Limpar</button>
+                                    <button id="editarBtn" onclick="Editar()" type="button" class="btn btn-success">Editar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+	<script>
+		atualizaTabela();
+	</script>
+</body>
+</html>
