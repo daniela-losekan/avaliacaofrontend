@@ -2,17 +2,14 @@ document.getElementById("join").style.display = "none";
 document.getElementById("index").style.display = "block";
 
 const tbRecados = [];
-console.log(tbRecados);
 
 function clickJoin() {
-    console.log("Clicou no botão JOIN");
 
     document.getElementById("index").style.display = "none";
     document.getElementById("join").style.display = "block";      
 }
 
 function clickLogar() {
-    console.log("Clicou no botão LOGAR");
 
     document.getElementById("index").style.display = "block";
     document.getElementById("join").style.display = "none";      
@@ -95,11 +92,9 @@ function logarUsuario(event) {
 function atualizaTabela()
 {
 	let tabela = document.getElementById('tabela');
-	
-	// limpa tabelas
+
 	$("#tabela tr").remove(); 
 
-	// busca os recados do storage
 	listaRecados = JSON.parse(localStorage.listaRecados);
 	
 	for (var item in listaRecados) {
@@ -144,10 +139,6 @@ function adicionarRecado(event) {
 	
 	listaRecados.push(recado);
     localStorage.setItem('listaRecados', JSON.stringify(listaRecados));
-	
-	
-	//JSON.parse(localStorage.tbRecados);
-	//console.log(localStorage.tbRecados);
 
     console.log('Recado adicionado com sucesso.');
 
